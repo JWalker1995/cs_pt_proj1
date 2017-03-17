@@ -5,7 +5,14 @@ class FSATable {
 
 public:
     struct Action {
+        Action(unsigned int new_state, bool suck, const std::string &emit_tok)
+            : new_state(new_state)
+            , suck(suck)
+            , emit_tok(emit_tok)
+        {}
+
         unsigned int new_state;
+        bool suck;
         const std::string &emit_tok;
     };
 
@@ -45,6 +52,11 @@ private:
 
     unsigned int get_state_index(unsigned int prev_state, unsigned int input_char) const {
         return (input_char - char_min) * num_states + prev_state;
+    }
+
+    const std::string &push_emit_token(const std::string &str) {
+        emit_tokens.push_back(str);
+        return emit_tokens.back();
     }
 };
 
