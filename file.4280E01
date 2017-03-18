@@ -1,0 +1,8 @@
+Keywords (reserved, suggested individual tokens)
+start stop decision while void int return read print program
+Operators delimiters etc.
+=  <<  >>  =!  == :  +  -  *  / & %  . (  ) , { } ; [ ]
+Integers 0 455 9328138 32890114
+any sequence of decimal digits, no sign
+you may assume no number longer than 8 digits
+Comments start with #commentbla and end with WS
